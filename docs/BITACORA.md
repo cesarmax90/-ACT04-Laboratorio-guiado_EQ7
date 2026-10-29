@@ -25,8 +25,6 @@ O015 DRAFT 1 450.00
 O016 DRAFT 1 2100.00
 ```
 
-> Captura pendiente: pantallazo de la terminal con estos 16 pedidos en DRAFT.
-
 ## 2. Actividad corta (cálculo manual)
 
 | Pedido | Cliente | Unidades | Total manual |
@@ -243,7 +241,6 @@ stateDiagram-v2
 
 Mapeo de errores: `InvalidOrderTransition` → 409; `InvalidOrderData` y `OrderItemLimitExceeded` → 422; pedido o SKU inexistente → 404.
 
-> Capturas pendientes en Swagger (`uvicorn app.api:app --reload` → `/docs`): una operación exitosa (`POST /orders/O013/confirm` → 200) y una rechazada (repetirla → 409).
 
 ## 7. Resultado de pytest (`python -m pytest -q`)
 
